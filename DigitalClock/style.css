@@ -1,0 +1,113 @@
+
+
+/* Make the carousel container a positioning anchor
+#carouselExampleAutoplaying {
+    position: relative;
+}
+
+/* Floating clock overlay */
+/* .carousel-clock-overlay { */
+    /* position: absolute; */
+    /* top: 20px;       move down */
+    /* left: 50%;       center horizontally */
+    /* transform: translateX(-50%); */
+    /* z-index: 1000;   above images */
+    /* text-align: center; */
+/* }
+
+.clock {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+h1{
+    color: white;
+} */ 
+
+/* Make the carousel container a positioning anchor */
+#carouselExampleAutoplaying {
+    position: relative;
+}
+
+
+/* GLASSMORPHISM CLOCK OVERLAY */
+.carousel-clock-overlay {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+
+    /* Glass Effect */
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    padding: 18px 30px;
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+    text-align: center;
+    color: white;
+}
+
+
+/* CLOCK TEXT */
+.carousel-clock-overlay h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+
+/* CLOCK SECTION */
+.clock {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.clock div {
+    text-align: center;
+}
+
+
+/* MAIN NUMBERS */
+.clock span:not(.text) {
+    display: block;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 34px;
+}
+
+
+/* LABEL TEXT */
+.clock .text {
+    margin-top: 4px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+
+/* RESPONSIVE: scale clock on smaller screens */
+@media (max-width: 768px) {
+    .carousel-clock-overlay {
+        padding: 12px 18px;
+    }
+
+    .clock span:not(.text) {
+        font-size: 26px;
+    }
+
+    .clock {
+        gap: 12px;
+    }
+
+    .carousel-clock-overlay h3 {
+        font-size: 18px;
+    }
+}
+
